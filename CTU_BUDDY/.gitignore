@@ -22,3 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.CTU_BUDDY/src/assets/Icons/fontawesome-free-6.5.2-web
