@@ -1,94 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: Nunito, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Header Section */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/CTU_BUDDY/src/assets/images/HomePageAssets/HeroSection.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10em;
+  align-items: center;
+}
+header nav h2 {
+  margin-right: auto;
+  font: 400 28px "Poppins", sans-serif;
+  color: rgb(255, 255, 255, 1);
+}
+header nav h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav h3 {
+  margin-left: auto;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 3em;
+}
+header nav ul a,
+header nav h3 a {
+  font: bold 20px "Montserrat", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.fa-user {
+  font-size: 20px;
+  margin-right: 1em;
+  color: white;
+}
+.hero-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.hero-section h1 {
+  font: 400 40px "Nunito", sans-serif;
+  color: white;
+}
+.hero-section p {
+  font: 400 20px "Inter", sans-serif;
+  color: white;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.button-color-red {
+  background-color: rgb(236, 34, 31, 0.8);
+  font: 400 20px "Inter", sans-serif;
+  color: white;
+  padding: 0.5em 1.5em;
+  border: 1px;
+  border-radius: 10px;
+  margin: 0 1em;
+}
+.button-color-red a {
+  font: 400 20px "Inter", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.button-color-white {
+  background-color: rgb(255, 255, 255, 0.8);
+  font: 400 20px "Inter", sans-serif;
+  padding: 0.5em 1.5em;
+  border: 1px;
+  border-radius: 10px;
+  margin: 0 1em;
+}
+.button-color-white a {
+  font: 400 20px "Inter", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .login-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  margin: auto;
 }
 
 .login-container h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 25px;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
 }
 
 .input-field {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .input-field label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: 500;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .input-field input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    font-family: "Nunito", sans-serif;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
+.login-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
 }
 
-button:hover {
-    background-color: #0056b3;
+.login-container button:hover {
+  background-color: #0056b3;
 }
 
 #message {
-    margin-top: 20px;
-    color: red;
-    font-size: 14px;
-    font-weight: 500;
+  margin-top: 20px;
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
-    .login-container {
-        width: 90%;
-        padding: 20px;
-    }
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .login-container {
-        width: 100%;
-    }
+  .login-container {
+    width: 100%;
+  }
 
-    button {
-        padding: 10px;
-    }
+  button {
+    padding: 10px;
+  }
 }
