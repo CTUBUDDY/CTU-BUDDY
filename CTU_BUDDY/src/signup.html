@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="/CTU_BUDDY/src/assets/css/signup.css" />
+    <link rel="stylesheet" href="./assets/css/signup.css" />
     <link rel="stylesheet" href="assets/Icons/fontawesome-free-6.5.2-web/css/all.min.css">
 
   </head>
@@ -38,7 +38,7 @@
     </header>
     <div class="signup-container">
       <h2>Sign Up</h2>
-      <form id="signupForm">
+      <form id="signupForm" method="post" action="/auth/signup">
         <div class="input-field">
           <label for="username">Username:</label>
           <input type="text" id="username" required />
@@ -51,11 +51,10 @@
           <label for="password">Password:</label>
           <input type="password" id="password" required />
         </div>
-        <button type="submit">Sign Up</button>
+        <button id = 'submit-button' type="submit">Sign Up</button>
       </form>
       <div id="message"></div>
     </div>
-
-    <script src="/CTU_BUDDY/src/js/signup.js"></script>
+    <script src="./js/signup.js"></script>
   </body>
 </html>

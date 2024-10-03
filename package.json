@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/CTUBUDDY/CTU-BUDDY.git/issues"
   },
-  "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme"
+  "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "express": "^4.21.0"
+  }
 }
