@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CollabrativeCoders/CWD412_FA3.git"
+    "url": "https://github.com/CTUBUDDY/CTU-BUDDY.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CollabrativeCoders/CWD412_FA3/issues"
+    "url": "https://github.com/CTUBUDDY/CTU-BUDDY.git/issues"
   },
-  "homepage": "https://github.com/CollabrativeCoders/CWD412_FA3#readme"
+  "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme"
 }
