@@ -298,3 +298,24 @@ footer small {
 .website-info i {
   margin-right: 1em;
 }
+
+/* Subscribe Button Style */
+.subscribe-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.subscribe-btn.unsubscribe {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.8;
+}
