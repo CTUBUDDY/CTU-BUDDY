@@ -8,8 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Serve signup.html page
 export const getSignup = (req, res) => {
-  res.send("Hello world");
-  // res.sendFile(path.join(__dirname, "../../src/signup.html"));
+  res.sendFile(path.join(__dirname, "../../src/signup.html"));
 };
 
 // Handle user signup
