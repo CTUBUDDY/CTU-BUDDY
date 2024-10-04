@@ -20,6 +20,11 @@
   "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
+    "bcrypt": "^5.1.1",
     "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.0"
   }
 }

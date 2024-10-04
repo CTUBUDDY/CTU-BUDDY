@@ -1,49 +1,41 @@
 const signupForm = document.getElementById("signupForm");
-const messageDiv = document.getElementById("message");
 
 signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
+  // Get the values from the form inputs
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
   const username = document.getElementById("username").value;
-  const data = {
-    username: username,
-    email: email,
-    password: password,
-  };
 
-  console.log(JSON.stringify(data));
+  // Check if all fields are filled in
+  if (!username || !email || !password) {
+    alert("Please fill in all fields."); // Alert to the user if any field is missing
+    return;
+  }
 
-  // Simulate a signup process
-  const response = { ok: true, message: "Signup successful!" }; // Simulated response for success
+  const data = { username, email, password };
 
   try {
+    // Send POST request to the backend
+    const response = await fetch("http://localhost:8000/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
     if (!response.ok) {
-      throw new Error(response.message || "Network response was not ok");
+      throw new Error(result.message || "Error occurred during signup.");
     }
 
-    messageDiv.textContent = response.message || "Signup successful!";
-
-    // Call function to save data as JSON file upon successful signup
-    saveDataAsJSON(data);
+    // Handle successful signup
+    console.log("Signup successful!", result);
+    window.location.href = "http://localhost:8000";
   } catch (error) {
     console.error("Error during signup:", error);
-    messageDiv.textContent = "An error occurred: " + error.message;
   }
 });
-
-// Function to save data as JSON
-function saveDataAsJSON(data) {
-  const jsonString = JSON.stringify(data, null, 2); // Convert data to JSON string
-  const blob = new Blob([jsonString], { type: "application/json" }); // Create a blob
-  const url = URL.createObjectURL(blob); // Create a URL for the blob
-
-  const a = document.createElement("a"); // Create a link element
-  a.href = url; // Set the href to the blob URL
-  a.download = "signupData.json"; // Set the desired file name
-  document.body.appendChild(a); // Append the link to the body
-  a.click(); // Trigger a click on the link to download
-  document.body.removeChild(a); // Remove the link after download
-  URL.revokeObjectURL(url); // Revoke the blob URL
-}
