@@ -5,23 +5,18 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node CTU_BUDDY/server/app.js",
-    "dev": "node CTU_BUDDY/server/app.js"
+    "start": "node CTU_BUDDY/server/server.js",
+    "dev": "node CTU_BUDDY/server/server.js"
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
     "url": "https://github.com/CTUBUDDY/CTU-BUDDY.git"
-=======
-    "url": "git+https://github.com/CTUBUDDY/CTU-BUDDY.git"
->>>>>>> 3086f77d0a544544dded397ff931d96cf185d9be
   },
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CTUBUDDY/CTU-BUDDY.git/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
@@ -32,7 +27,4 @@
     "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.0"
   }
-=======
-  "homepage": "https://github.com/CTUBUDDY/CTU-BUDDY.git#readme"
->>>>>>> 3086f77d0a544544dded397ff931d96cf185d9be
 }
