@@ -260,6 +260,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (courseName) {
     mySelect.value = courseName;
+    const courses = document.querySelectorAll("#mySelect option");
+    courses.forEach((value) => {
+      if (!(value.value === courseName)) {
+        mySelect.removeChild(value);
+      }
+    });
     // Add your logic to display the timetable for the course
   } else {
     console.log("No course selected.");
