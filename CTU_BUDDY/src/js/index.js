@@ -48,3 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const poes = document.querySelector("nav h3 a");
+poes.addEventListener("click", (e) => {
+  e.target.textContent = "L. Vumani";
+});
