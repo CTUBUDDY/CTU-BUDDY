@@ -252,3 +252,16 @@ mySelect.addEventListener("change", () => {
     }
   }
 });
+
+// timetable.html script
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const courseName = params.get("course");
+
+  if (courseName) {
+    mySelect.value = courseName;
+    // Add your logic to display the timetable for the course
+  } else {
+    console.log("No course selected.");
+  }
+});

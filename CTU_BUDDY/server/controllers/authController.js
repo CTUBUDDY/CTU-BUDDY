@@ -10,13 +10,19 @@ export const getSignup = (req, res) => {
 };
 
 export const signup = async (req, res) => {
-  const { email, password } = req.body;
+  const { username, email, password } = req.body;
+  // Basic validation
+  if (!email || !password || !username) {
+    return res
+      .status(400)
+      .json({ message: "Email and password are required." });
+  }
 
   try {
-    let { data, error } = await supabase.auth.signUp({
-      email: email,
-      password: password,
-    });
+    // Insert the new user into the public.users table
+    const { data, error } = await supabase
+      .from("public.users")
+      .insert([{ username, email, password }]); // Note: Store passwords securely (hashed) in a real application
 
     if (error) {
       return res.status(400).json({ message: error.message });
