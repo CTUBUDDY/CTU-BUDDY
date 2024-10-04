@@ -48,12 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-const userData = localStorage.getItem("user");
-if (userData) {
-  const user = JSON.parse(userData);
-  console.log("Logged in user:", user);
-  // You can now use user.username and user.email as needed
-}
 
 const poes = document.querySelector("nav h3 a");
 poes.addEventListener("click", (e) => {
